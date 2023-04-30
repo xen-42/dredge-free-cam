@@ -11,6 +11,6 @@ TODO:
 - Fix UI being hidden
 
 To install:
-Install BepInEx into steamapp/common/DREDGE or wherever you have the game installed. 
-Inside the BepInEx/plugins folder, unzip the release
-Run the game and pray
+- Install BepInEx into steamapp/common/DREDGE or wherever you have the game installed. 
+- Inside the BepInEx/plugins folder, unzip the release
+- Run the game and pray
