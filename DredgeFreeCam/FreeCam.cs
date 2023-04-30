@@ -104,14 +104,14 @@ namespace DredgeFreeCam
 				{
 					rot.y -= 1;
 				}
-				if (Input.GetKey(KeyCode.E))
+				if (Input.GetKey(KeyCode.R))
 				{
 					rot.y += 1;
 				}
 
-				_xRot += rot.x * Time.deltaTime * lookSpeed;
-				_yRot += rot.y * Time.deltaTime * lookSpeed;
-				transform.position += Quaternion.AngleAxis(_yRot, Vector3.up) * dir * Time.deltaTime * speed;
+				_xRot += rot.x * Time.fixedDeltaTime * lookSpeed;
+				_yRot += rot.y * Time.fixedDeltaTime * lookSpeed;
+				transform.position += Quaternion.AngleAxis(_yRot, Vector3.up) * dir * Time.fixedDeltaTime * speed;
 
 				transform.rotation = Quaternion.AngleAxis(_yRot, Vector3.up) * Quaternion.AngleAxis(_xRot, Vector3.left);
 			}
