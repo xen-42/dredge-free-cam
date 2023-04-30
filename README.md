@@ -9,3 +9,8 @@ TODO:
 - Disable all player-related controls when in freecam
 - Use mouse to look around
 - Fix UI being hidden
+
+To install:
+Install BepInEx into steamapp/common/DREDGE or wherever you have the game installed. 
+Inside the BepInEx/plugins folder, unzip the release
+Run the game and pray
