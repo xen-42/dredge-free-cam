@@ -10,8 +10,12 @@ namespace DredgeFreeCam
 	[HarmonyPatch]
 	public class Plugin : BaseUnityPlugin
 	{
+		public static Plugin Instance { get; private set; }
+
 		private void Awake()
 		{
+			Instance = this;
+
 			// Plugin startup logic
 			Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
 			Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
@@ -25,5 +29,7 @@ namespace DredgeFreeCam
 			freecam.AddComponent<FreeCam>();
 			freecam.transform.position = __instance.transform.position;
 		}
+
+		public static void Log(string msg) => Instance.Logger.LogInfo(msg);
 	}
 }
